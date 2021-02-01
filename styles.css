@@ -1,0 +1,64 @@
+#name{
+  font-size: x-large;
+  font-family: "Computer Modern Bright Semibold", Helvetica, sans-serif;
+}
+
+#subname{
+  font-size: large;
+  font-family: "Computer Modern Sans", Helvetica, sans-serif;
+}
+
+#nav{
+  padding-top: 20px;
+  flex: 0.5;
+  min-width: 300px
+}
+
+#navsub {
+  float: right;
+  padding-right: 50px;
+}
+
+#logo {
+
+}
+
+ul {
+  padding-left: 20px;
+}
+
+
+#links{
+  font-size: medium;
+  font-family: "Computer Modern Sans", Helvetica, sans-serif;
+}
+
+#contentblk {
+  padding-top: 40px;
+  flex: 1;
+  min-width: 300px
+}
+
+#contentblksub {
+  float: left;
+  max-width: 66%;
+}
+
+#home{
+  text-indent: 50px;
+  font-size: medium;
+  font-family: "Computer Modern Sans", Helvetica, sans-serif;
+  display : none;
+}
+
+#contact{
+  font-size: medium;
+  font-family: "Computer Modern Sans", Helvetica, sans-serif;
+  display : none;
+}
+
+#contain{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
