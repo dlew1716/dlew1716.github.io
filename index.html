@@ -1,1 +1,55 @@
-First
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dylan's Projects Page</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="fonts/cmu/Sans/cmun-sans.css">
+<link rel="stylesheet" href="fonts/cmu/Sans Demi-Condensed/cmun-sans-demicondensed.css">
+<link rel="stylesheet" href="fonts/cmu/Bright Semibold/cmun-bright-semibold.css">
+<script src="script.js"></script>
+</head>
+<body onresize="wrapfix()">
+
+<div id="contain">
+  <div id="nav"> 
+    <div id="navsub">
+      <div id="logo">
+        <div id="name"> Dylan Lewis </div>
+        <div id="subname"> Electrical Engineer </div>
+      </div>
+      <div id="links">
+        <ul id="firstLst">
+        <li onclick="switchm(this,'home')">Home</li>
+        <li id="projLst">Projects
+          <ul>
+            <li>Software Modem</li>
+            <li>NOAA APT</li>
+            <li>Speech Mix</li>
+            <li>Remote Weather</li>
+            <li>Ram Pump</li>
+            <li>Nixie Clock</li>
+          </ul>
+        </li>
+        <li>Hobbies</li>
+        <li onclick="switchm(this,'contact')">Contact</li>
+      </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="contentblk">
+    <div id="contentblksub">
+      <div id="home">
+      My name is Dylan Lewis and I currently work as an Electrical Engineer in the satellite communications industry. I love to build and tinker so this site serves as a collection of some of my past and current projects. 
+      </div>
+      <div id="contact">
+        <ul>
+          <li>Email: dbl1716@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
