@@ -25,7 +25,7 @@ window.onload = function() {
 
     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
   // true for mobile device
-      document.getElementsByTagName( "html" )[0].style[ "font-size" ] = "40px"
+      document.getElementsByTagName( "html" )[0].style[ "font-size" ] = "20px"
     }else{
 
     }
