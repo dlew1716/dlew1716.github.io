@@ -1,22 +1,25 @@
+html{
+  font-size: 16px;
+}
 #name{
-  font-size: x-large;
+  font-size: 1.5rem;
   font-family: "Computer Modern Bright Semibold", Helvetica, sans-serif;
 }
 
 #subname{
-  font-size: large;
+  font-size: 1.1rem;
   font-family: "Computer Modern Sans", Helvetica, sans-serif;
 }
 
 #nav{
-  padding-top: 20px;
+  padding-top: 2rem;
   flex: 0.5;
-  min-width: 300px
+
 }
 
 #navsub {
   float: right;
-  padding-right: 50px;
+  padding-right: 4rem;
 }
 
 #logo {
@@ -24,35 +27,36 @@
 }
 
 ul {
-  padding-left: 20px;
+  padding-left: 1rem;
 }
 
 
 #links{
-  font-size: medium;
+  font-size: 1rem;
   font-family: "Computer Modern Sans", Helvetica, sans-serif;
+  white-space: nowrap;
 }
 
 #contentblk {
-  padding-top: 40px;
+  padding-top: 4rem;
   flex: 1;
   min-width: 300px
 }
 
 #contentblksub {
   float: left;
-  max-width: 66%;
+  max-width: 620px;
 }
 
 #home{
   text-indent: 50px;
-  font-size: medium;
+  font-size: 1rem;
   font-family: "Computer Modern Sans", Helvetica, sans-serif;
   display : none;
 }
 
 #contact{
-  font-size: medium;
+  font-size: 1rem;
   font-family: "Computer Modern Sans", Helvetica, sans-serif;
   display : none;
 }
