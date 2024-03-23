@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dylan's Projects Page</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="fonts/cmu/Sans/cmun-sans.css">
+<link rel="stylesheet" href="fonts/cmu/Sans Demi-Condensed/cmun-sans-demicondensed.css">
+<link rel="stylesheet" href="fonts/cmu/Bright Semibold/cmun-bright-semibold.css">
+<script src="script.js"></script>
+</head>
+<body onresize="wrapfix()">
+
+<div id="contain">
+  <div id="nav">
+    <div id="navsub">
+      <div id="logo">
+        <div id="name"> Dylan Lewis </div>
+        <div id="subname"> Electrical Engineer </div>
+      </div>
+      <div id="links">
+        <ul id="firstLst">
+        <li onclick="switchm(this,'home')">Home</li>
+        <li id="projLst">Projects
+          <ul>
+            <li onclick="switchm(this,'modem')">GPU QPSK Receiver</li>
+            <li onclick="switchm(this,'noaa')">NOAA APT</li>
+            <li onclick="switchm(this,'weather')">Weather Hotspot</li>
+            <li onclick="switchm(this,'ram')">Ram Pump</li>
+            <li onclick="switchm(this,'life')">Lifepowder</li>
+            <li onclick="switchm(this,'cnc')">CNC</li>
+            <li onclick="switchm(this,'nixie')">Nixie Display</li>
+            <li onclick="switchm(this,'darts')">Senior Project</li>
+            <li onclick="switchm(this,'misc')">Miscellaneous</li>
+          </ul>
+        </li>
+        <li onclick="switchm(this,'hobbies')">Hobbies</li>
+        <li onclick="switchm(this,'contact')">Contact</li>
+      </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="contentblk">
+    <div id="contentblksub">
+      <div id="home">
+        My name is Dylan Lewis and I currently work as an Electrical Engineer in the quantum computing industry. I love to build and tinker so this site serves as a collection of some of my past and current projects.
+      </div>
+      <div id="modem">
+        <h1 class="titles">GPU Accelerated Demodulator</h1>
+        <div class="bodies">
+          Work in progress. Building a GPU accelerated QPSK demodulator. Polyphase MF/dMF symbol timing detector implemented.
+          Very sparse design doc <a href="pdf/Design_Reference.pdf" download>here.</a>
+        </div>
+      </div>
+
+      <div id="darts">
+        <h1 class="titles">DARTS - Van Leer Dish Restoration</h1>
+        <div class="bodies">
+          Georgia Tech senior project to restore tracking and RF chain of a roof top parabolic dish.
+          We received a couple of Ku band signals from geostationary satellites.
+          We created a web interface to control dish remotely.
+          <br>
+          <br>
+          <img data-src="img/darts/dish.JPG" style="width: 620px;">
+          <div class="caption">Dish from below</div>
+
+          <img data-src="img/darts/dishfar.JPG" style="width: 620px;">
+          <div class="caption">Dish from control room</div>
+
+          <img data-src="img/darts/controlblockdiagram.png" style="width: 620px;">
+          <div class="caption">DARTS control block diagram</div>
+
+          <img data-src="img/darts/amc.gif" style="width: 620px;">
+          <div class="caption">AMC15 test channel decoded with RTL-SDR</div>
+
+          <img data-src="img/darts/Dec2 scaled color.png" style="width: 620px;">
+          <div class="caption">Ku band "image" of two geostationary satellites with false color</div>
+        </div>
+      </div>
+
+      <div id="cnc">
+        <h1 class="titles">CNC Project</h1>
+        <div class="bodies">
+          A defunct project at the moment. Goal is to create a 3axis CNC machine.
+          <br>
+          <br>
+          <img data-src="img/cnc/CNCv3_RENDER3.png" >
+          <div class="caption">Rendering of the CNC</div>
+
+          <img data-src="img/cnc/moving.gif" style="width: 620px;">
+          <div class="caption">CNC moving X axis</div>
+
+        </div>
+      </div>
+
+      <div id="weather">
+        <h1 class="titles">ESP32 Base Weather Station</h1>
+        <div class="bodies">
+          My brother and I share a 1991 MacGregor 26s sailboat which we use as a floating camper for trips to the beach.
+          We both enjoy kiteboarding, which is where a large kite pulls you on a board.
+          Since kiteboarding is a wind powered sport, I built a small weather station to sit on top of our sailboat mast to provide us with live wind and temperature readings.
+          We threaded wire up to the top of the 26 foot mast to provide the station with 12V power.
+          The station itself is a cupped wind meter and thermometer connected to an ESP32 in a waterproof enclosure.
+          A 12V LED flood light is also mounted with the station.
+          The ESP32 is a WiFi AP that routes all those who connect to a web page.
+          The web page serves live wind and temperature readings, as well as a plot of the wind and temperature history.
+          Can't find any picture of the station itself at the moment, but a gif of the simulated web page and a photo of the boat is below.
+          <br>
+          <br>
+          <img data-src="https://github.com/dlew1716/MacgregorAnemometer/raw/master/demo.gif" >
+          <div class="caption">Simulated web gui</div>
+
+          <img data-src="img/greg/greg.png" >
+          <div class="caption">Ol' Greg @ Tavernier Key</div>
+
+          <img data-src="img/greg/night.png" >
+          <div class="caption">Ol' Greg @ Bahia Honda marina dwarfed by a catamaran</div>
+
+
+        </div>
+      </div>
+
+      <div id="life">
+        <h1 class="titles">Lifepowder</h1>
+        <div class="bodies">
+          Lifepowder was a project I worked on with a couple of friends senior year of college.
+          At the time, powdered meal replacement products like Soylent were really taking off.
+          Problem with Soylent was that it had only one formulation, and we knew that different people have different nutritional needs and wants.
+          So we set out to create an algorithm that would accept parameters about a person and create a formulation of ingredients to best fulfill that person's desired nutrition profile.
+          We also built a machine that could create the powders automatically.
+          The machine was built from T-Slot and the powder dispensers were built from food safe acrylic.
+          A conveyor belt was also built to move powder receptacles between the powder dispensers.
+          Scales with infrared feedback closed the loop on how much powder each stage should dispense.
+          <br>
+          <br>
+          <img data-src="img/lifepowder/no_auger.JPG">
+          <div class="caption">Powder dispenser casing</div>
+
+          <img data-src="img/lifepowder/n.png">
+          <div class="caption">Powder dispensers lined up over conveyor belt render</div>
+
+          <img data-src="img/lifepowder/top_view.JPG">
+          <div class="caption">Powder dispensers lined up over conveyor belt</div>
+
+          <img data-src="img/lifepowder/close.JPG">
+          <div class="caption">Powder dispensers up close</div>
+
+          <img data-src="img/lifepowder/waterjet.JPG">
+          <div class="caption">Water jetting a food safe dispenser wheel</div>
+
+          <img data-src="img/lifepowder/food_safe.JPG">
+          <div class="caption">Food safe dispenser wheel</div>
+
+          <img data-src="img/lifepowder/conveyor.gif" style="width: 620px;">
+          <div class="caption">Conveyor belt in action</div>
+
+        </div>
+      </div>
+
+      <div id="ram">
+        <h1 class="titles">Ram Pump</h1>
+        <div class="bodies">
+          Ram pump built and installed on a spring fed pond to pump water up to a chicken coop.
+          Ram pumps are really simple to implement, just two check valves are the only moving parts.
+          These pumps can lift water about 7 times higher the intake location.
+          The intake to this ramp pump is a siphon system.
+          Two ball valves allow you to prime the intake siphon with only a 5 gallon bucket and funnel.
+          The siphon intake system brings water to a large standpipe the feeds the drive pipe.
+          There are three ongoing issues with this pump that need resolving.
+          <br>
+          <br>
+          1) The siphon system eventually gets air in it, making the pump stop. I suspect this is from air bubbles that propogate back up the drive pipe.
+          <br>
+          2) The pond level has fallen below the intake. This is due to a leak in the overflow. Can't fix without draining and the drain is currently broken.
+          <br>
+          3) The delivery pipe up to the chicken coop is a 500ft soft irrigation hose. Animals have chewed into this hose multiple times. A PVC delivery pipe is needed.
+          <br>
+          <br>
+          <iframe id="ram1" src="https://drive.google.com/file/d/1_rqCpvAuzs0njkHBkcCqUCjmD5-L-LmC/preview?enablejsapi=1" width="640" height="480"  allowfullscreen="true" allowscriptaccess="always" frameborder="0"></iframe>
+          <iframe id="ram2" src="https://drive.google.com/file/d/1ilmWGN6e9ORUSOaC6WHMBfCmEqZPeD8-/preview?enablejsapi=1" width="640" height="480"  allowfullscreen="true" allowscriptaccess="always" frameborder="0"></iframe>
+          <img data-src="img/ram/pickle.jpg" >
+          <div class="caption">Pickle barrels for storage</div>
+          <img data-src="img/ram/potable.jpg" >
+          <div class="caption">Delivery stand pipe</div>
+          <img data-src="img/ram/tower.jpg" >
+          <div class="caption">Water tower being built</div>
+          <img data-src="img/ram/water.jpg" >
+          <div class="caption">Water flowing up from the pond below</div>
+        </div>
+      </div>
+      <div id="noaa">
+        <h1 class="titles">NOAA APT Antenna and Decoder</h1>
+        <div class="bodies">
+          NOAA APT is an analog weather satellite image service. Images are broadcast from polar orbit satellites around 137MHz in 36KHz wide channels.
+          The transmission is right hand circularly polarized. It's common to use a QFH antenna to receive NOAA APT weather satellite images.
+          I started with a paper from NASA on constructing a QFH antennas.
+          Some components used in the paper were not readily available to me.
+          Also the shape of the antenna was adjusted slightly to make the antenna easier to build.
+          <img data-src="img/noaa/qfh_cad.svg" alt="QFH cad">
+          <div class="caption">Partially assembled CAD model of QFH antenna targeting laser cutter construction</div>
+          I created a model of the antenna in 4NEC to reoptimize the antenna, considering my material and construction method changes.
+          <img data-src="img/noaa/qfh_4nec.JPG" alt="QFH 4nec">
+          <div class="caption">QFH model in 4NEC for optimization</div>
+          I constructed this antenna in college around 2016. My first attempt at building a QFH was to use a 3 inch PVC pipe as the core structure and using swagelok connectors to connect copper antenna elements to the PVC core.
+          The result was less than I'd hoped, it was diffcult to get eveything to line up properly and the swagelok's did not hold the antenna arms as well as I had expected.
+          Luckily at the time, I had access to laser cutting and etching machines through school.
+          The antenna frame was constructed from laser cut acrylic and assembled into a stack using delrin threaded rods.
+          <br>
+          <br>
+          <img data-src="img/noaa/qfh_laser.JPG" alt="QFH laser">
+          <div class="caption">Black 1/4" acrylic being laser cut</div>
+          <img data-src="img/noaa/qfh_assembled1.JPG" alt="QFH assembled1">
+          <div class="caption">Assembly of laser cut pieces into balun box</div>
+          <img data-src="img/noaa/qfh_assembled2.JPG" alt="QFH assembled2">
+          <div class="caption">Assembly with delrin rods before copper antenna elements installed</div>
+          The antenna conductors are made of 8mm copper tube, soldered together with 90° elbows.
+          Conductors were formed by bending around a concrete form from the hardware store.
+          The balun was constructed by wrapping coax around a 20mm PVC pipe.
+          The copper pipes were bonded to the balun using a custom etched PCB.
+          The PCB was etched by applying spray paint to a raw copper PCB and using a laser etcher to etch the negative.
+          Then paint thinner was used to remove the burnt spray paint and ferric chloride was used to remove the copper.
+          Fuse holders are soldered to the PCB and used to hold the copper pipes where they enter the balun box.
+          <br>
+          <br>
+          <img data-src="img/noaa/qfh.png" alt="QFH Antenna">
+          <div class="caption">Final Assembled Antenna</div>
+
+          The antenna was connected to an RTL-SDR USB stick for reception.
+          Gpredict was used to determine when satelite passes would occur next.
+          During a pass the open source WQRX software was used to configure the RTL-SDR for the satellite frequency and for FM demodulation mode.
+          The FM bandwidth was set to about 36MHz to account for doppler shift when the satellite was low on the horizon.
+          The FM demodulated output was recorded to an uncompressed audio file.
+          I wrote a Python program to convert the audio file into an image.
+          <br>
+          <br>
+          <img data-src="img/noaa/qfh_deployed.JPG" alt="QFH deployed">
+          <div class="caption">QFH on top of the Van Leer building @ Georgia Tech in Atlanta. Receiving a photo of Hurricane Matthew</div>
+
+          The APT satellites usually send two different images at once, usually one is infrared and the other is visible.
+          <br>
+          <br>
+          <img data-src="img/noaa/satmatt3.jpg" alt="Hurricane Matthew">
+          <div class="caption">Decoded APT image of Hurricane Matthew (2016)</div>
+          Listen to the wideband FM demodulated APT signal here. (FLAC audio file)
+          <br>
+          <audio src="sound/noaa/satmatt3.flac" controls>
+          </audio>
+        </div>
+      </div>
+      <div id="nixie">
+        <h1 class="titles">Nixie Display</h1>
+        <div class="bodies">
+          Nixie display project from 2018. Uses the common IN-12 tubes.
+          <img data-src="https://github.com/dlew1716/NixieFW/raw/master/demo.gif" alt="Nixie Gif">
+          <img data-src="img/nixie/silk.svg" alt="Nixie Silk Screen" width=600>
+          <img data-src="img/nixie/fu.svg" alt="Nixie front copper" width=600>
+          <img data-src="img/nixie/bu.svg" alt="Nixie back copper" width=600>
+          <img data-src="img/nixie/fcu.svg" alt="Power front copper" width=600>
+          <img data-src="img/nixie/bcu.svg" alt="Power back copper" width=600>
+        </div>
+      </div>
+      <div id="misc">
+        <h1 class="titles">Miscellaneous and Forgotten Projects</h1>
+        <div class="bodies">
+          <h2 class="subtit">Night Vision Monocular</h2>
+          Constructed by first cannabalizing an old VHR camcorder's viewfinder.
+          Old VHS camcorder viewfinders commonly used NTSC video inputs.
+          Next I bought a cheap Sony "spy cam" from eBay, I found a particular Sony model that had good low light sensitivity and did not have an IR filter.
+          Also bought some infrared LEDs from eBay and an electronics project enclosure from Radio Shack (R.I.P Radio Shack).
+          Fixing the Sony mini spy cam and about 8 of the LEDs to the front of the box and aiming the viewfinder out the back, I had a basic night vision monocular.
+          It worked suprisingly well, you could see in absolute darkness at least 5-10 feet in front of you. The only surviving photo of this firehazard is below.
+          <br>
+          <br>
+          <img data-src="img/nightvision/monocular.jpg" alt="Night vision monocular" width=600>
+          <div class="caption">Night vision monocular</div>
+
+          <h2 class="subtit">Biquad Antenna Car</h2>
+          Built a biquad antenna on a PCB. I used the spray paint method to build this board, just like the QFH balun board.
+          I built this board as part of a class competition. Each team was provided with an RF recitifer and had to build their own antenna and car.
+          The goal was to get your car to travel as far as possible. The power source was a 2.4GHz RF generator. I bought a solar power car from Amazon and removed the solar panel.
+          I built up a cardboard frame to hold the antenna up into the RF generators beam path. The car performed really well.
+          <br>
+          <br>
+          <img data-src="img/antennas/3d.png" alt="biquad simulation" width=600>
+          <div class="caption">4NEC simulation</div>
+
+          Simulated as a wire antenna but of course the antenna is actually on a dielectric surface, so I shrunk some versions of the antenna to compensate.
+          Unfortunatley, the laser etcher lost its mind halfway through the etching, see below.
+          <img data-src="img/antennas/preetch.JPG" alt="pre etched board" width=600>
+          <div class="caption">After laser etching, before copper etching</div>
+
+          <img data-src="img/antennas/ferric.JPG" alt="ferric bath" width=600>
+          <div class="caption">Copper etching in ferric chloride</div>
+
+          <img data-src="img/antennas/biquad_close.JPG" alt="biquad up close" width=600>
+          <div class="caption">Up close look at the cut board with reflector</div>
+
+          <img data-src="img/antennas/biquad_car.JPG" alt="biquad car" width=600>
+          <div class="caption">View of the "RF" powered car</div>
+
+          <h2 class="subtit">Chicago Windmill</h2>
+
+          Borrowed a bucket truck to assess repairing an old 1939 chicago windmill.
+          <br>
+          <br>
+          <img data-src="img/windmill/lift.jpg" alt="" width=600>
+          <div class="caption">Boom truck used to access gear box</div>
+          <img data-src="img/windmill/gear_bottom.JPG" alt="" width=600>
+          <div class="caption">Looking up at the gear box from below</div>
+          <img data-src="img/windmill/gear_top.JPG" alt="" width=600>
+          <div class="caption">Gear box cover removed</div>
+          <img data-src="img/windmill/date.JPG" alt="" width=600>
+          <div class="caption">Markings indicating date and well depth</div>
+
+
+          <h2 class="subtit">Rocket Relay Car</h2>
+          6th grade me thought it would be cool to launch a rocket remotely from an RC car.
+          So I attached a Estes rocket launcher to an RC car.
+          Attached a small RC car upside down on top with a screw in a wheel that would make contact with the "launch" circuit of the Estes launcher.
+          Volia.
+          <br>
+          <br>
+          <img data-src="img/remote_rocket/rr.gif" alt="rocket relay" width=600>
+          <div class="caption">Gif of a launch</div>
+
+          <h2 class="subtit">Wobble Scope</h2>
+
+          Wired up an audio amp to the drive coils of this old surveillance CRT display.
+          <br>
+          <br>
+          <img data-src="img/wobblescope/wobble.JPG" alt="wobble" width=600>
+          <div class="caption">Wobbl'n</div>
+
+          <h2 class="subtit">Cube</h2>
+
+          My buddy made an awesome replica cube from the Portal game.
+          He outfitted it with speakers and lights.
+          I just made a little Arduino board to control the lights based on sound intensity for him.
+          <br>
+          <br>
+          <img data-src="img/cube/cube_playing.gif" alt="cubing" width=600>
+          <div class="caption">The Cube in action</div>
+
+          <h2 class="subtit">Cellphone</h2>
+
+          Put together a rudimentary cellphone using a SIM900 module and an Arduino.
+          <br>
+          <br>
+          <img data-src="img/cellphone/v1.jpg" alt="cell v1" width=600>
+          <div class="caption">The cell phone that could only call one person</div>
+
+          <img data-src="img/cellphone/v2.jpg" alt="cell v2" width=600>
+          <div class="caption">Adding a keypad</div>
+
+          <h2 class="subtit">Bike Rack</h2>
+
+          Welded a steel frame with two bike fork mount holders for a Nissan Xterra roof.
+          <br>
+          <br>
+          <img data-src="img/cars/bike.jpg" alt="bike rack" width=600>
+          <div class="caption">Bike Rack</div>
+
+          <h2 class="subtit">Brake Controller</h2>
+
+          Install a brake controller on by F-150
+          <br>
+          <br>
+          <img data-src="img/cars/knob.png" alt="brake knob" width=600>
+          <div class="caption">Controller knob dash install</div>
+          <img data-src="img/cars/plug.jpg" alt="7 pin installation" width=600>
+          <div class="caption">7 pin plug installed</div>
+
+
+          <h2 class="subtit">UV Meter</h2>
+
+          I was an outdoor pool lifeguard for a while and was always curious about how much UV was getting through on cloudy days.
+          Used a UV LED as a sensor to measure UV level and display using a bar LED. Not really sure what the spectral repsonse of a UV LED is but it did seem to work somewhat.
+          <br>
+          <br>
+          <img data-src="img/uv/uv.jpg" alt="uv" width=600>
+          <div class="caption">Sketchy UV Meter</div>
+
+        </div>
+      </div>
+      <div id="contact">
+        <ul>
+          <li>Email: dbl1716@gmail.com</li>
+        </ul>
+      </div>
+      <div id="hobbies">
+        <ul>
+          <h2 class="subtit">Mountain Biking</h2>
+          <li>Fun Mountain Biking Trails</li>
+          <ul>
+            <li>LH Thompson: Macon, GA</li>
+            <li>Chicopee Woods:  Gainsville, GA</li>
+            <li>Oak Mountain: Birmingham, AL</li>
+            <li>The Pig: Macon, GA</li>
+          </ul>
+
+          <h2 class="subtit">Hiking</h2>
+          <img data-src="img/hike/evans.JPG" alt="evans" width=600>
+          <div class="caption">Mt Evans</div>
+
+          <img data-src="img/hike/iron.JPG" alt="iron" width=600>
+          <div class="caption">Flat Irons</div>
+
+          <h2 class="subtit">Kiteboarding</h2>
+
+          <img data-src="img/kite/tav.JPEG" alt="tav" width=600>
+          <div class="caption">Tavernier Key</div>
+
+          <img data-src="img/kite/rvpark.png" alt="tav" width=600>
+          <div class="caption">Ohio Key</div>
+
+          <img data-src="img/kite/hilton.png" alt="hilton" width=600>
+          <div class="caption">Track at Hilton Head</div>
+
+          <h2 class="subtit">Etc</h2>
+
+          <img data-src="img/cars/pitbike.png" alt="pitbike" width=600>
+          <div class="caption">Fun 125CC Chinese brand pit</div>
+
+
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

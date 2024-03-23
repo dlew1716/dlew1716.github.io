@@ -1,0 +1,44 @@
+CM 
+CE
+SY ED=0.221239	'Elements square diagonal length / 2
+SY ED2 = ED * 2
+SY ED3 = ED * 3
+SY ED4 = ED * 4
+SY WR=7e-3	'Element wire radius
+SY G = WR + .001	'Gap for soldering to feed
+SY S=0.057541	'Spacing between element and reflector
+SY S1 = S - WR - 0.01
+SY S2 = S + WR + 0.01
+SY RH=0.507636	'Reflector height / 2
+SY RL=1.052817	'Reflector  length / 2
+SY R1=-0.4
+SY EDR=0.246862	'Elements square diagonal length / 2
+SY EDR2 = EDR * 2
+SY EDR3 = EDR* 3
+SY EDR4 = EDR * 4
+SY EDF=0.285335	'Elements square diagonal length / 2
+SY EDF2 = EDF * 2
+SY EDF3 = EDF* 3
+SY EDF4 = EDF * 4
+SY F1=0.187581
+GW	1	10	S	0	G	S	ED	ED	WR
+GW	2	10	S	ED	ED	S	ED2	0	WR
+GW	3	010	S	ED2	0	S	ED	-ED	WR
+GW	4	010	S	ED	-ED	S	0	-G	WR
+GW	9	10	S+R1	0	G	S+R1	EDR	EDR	WR
+GW	10	10	S+R1	EDR	EDR	S+R1	EDR2	0	WR
+GW	11	010	S+R1	EDR2	0	S+R1	EDR	-EDR	WR
+GW	12	010	S+R1	EDR	-EDR	S+R1	0	-G	WR
+GW	9	10	S+F1	0	G	S+F1	EDF	EDF	WR
+GW	10	10	S+F1	EDF	EDF	S+F1	EDF2	0	WR
+GW	11	010	S+F1	EDF2	0	S+F1	EDF	-EDF	WR
+GW	12	010	S+F1	EDF	-EDF	S+F1	0	-G	WR
+GX	1	010
+GW	17	1	S	0	-G	S	0	G	WR
+GS	0	0	0.05169
+GE	0
+GN	-1
+EK
+EX	0	17	1	0	1.	0	0
+FR	0	0	0	0	5800	0
+EN

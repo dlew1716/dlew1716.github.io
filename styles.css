@@ -1,0 +1,165 @@
+html{
+  font-size: 16px;
+}
+#name{
+  font-size: 1.5rem;
+  font-family: "Computer Modern Bright Semibold", Helvetica, sans-serif;
+}
+
+#subname{
+  font-size: 1.1rem;
+  font-family: "Computer Modern Sans", Helvetica, sans-serif;
+}
+
+#nav{
+  padding-top: 2rem;
+  flex: 0.5;
+
+}
+
+#navsub {
+  float: right;
+  padding-right: 4rem;
+}
+
+#logo {
+
+}
+
+ul {
+  padding-left: 1rem;
+}
+
+
+#links{
+  font-size: 1rem;
+  font-family: "Computer Modern Sans", Helvetica, sans-serif;
+  white-space: nowrap;
+}
+
+#contentblk {
+  padding-top: 4rem;
+  flex: 1;
+  min-width: 300px
+}
+
+#contentblksub {
+  float: left;
+  max-width: 620px;
+}
+
+#home{
+  text-indent: 50px;
+  font-size: 1rem;
+  font-family: "Computer Modern Sans", Helvetica, sans-serif;
+  display : block;
+}
+
+#noaa{
+
+  font-size: 1rem;
+  font-family: "Computer Modern Sans", Helvetica, sans-serif;
+  display : none;
+}
+
+.bodies{
+    text-indent: 50px;
+
+}
+
+.titles{
+    text-align: center;
+}
+
+.caption{
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+    text-indent: 0px;
+}
+
+.subtit{
+    text-indent: 0px;
+}
+
+#modem{
+  font-size: 1rem;
+  font-family: "Computer Modern Sans", Helvetica, sans-serif;
+  display : none;
+}
+
+#cnc{
+  font-size: 1rem;
+  font-family: "Computer Modern Sans", Helvetica, sans-serif;
+  display : none;
+}
+
+
+#life{
+  font-size: 1rem;
+  font-family: "Computer Modern Sans", Helvetica, sans-serif;
+  display : none;
+}
+
+#weather{
+  font-size: 1rem;
+  font-family: "Computer Modern Sans", Helvetica, sans-serif;
+  display : none;
+}
+
+
+#nixie{
+  font-size: 1rem;
+  font-family: "Computer Modern Sans", Helvetica, sans-serif;
+  display : none;
+}
+
+#ram{
+  font-size: 1rem;
+  font-family: "Computer Modern Sans", Helvetica, sans-serif;
+  display : none;
+}
+
+#hobbies{
+  font-size: 1rem;
+  font-family: "Computer Modern Sans", Helvetica, sans-serif;
+  display : none;
+}
+
+#misc{
+  font-size: 1rem;
+  font-family: "Computer Modern Sans", Helvetica, sans-serif;
+  display : none;
+}
+
+#darts{
+  font-size: 1rem;
+  font-family: "Computer Modern Sans", Helvetica, sans-serif;
+  display : none;
+}
+
+img{
+
+  max-width:100%;
+  max-height:auto;
+}
+
+iframe{
+
+  max-width:100%;
+  max-height:auto;
+
+}
+
+#contact{
+  font-size: 1rem;
+  font-family: "Computer Modern Sans", Helvetica, sans-serif;
+  display : none;
+}
+
+#contain{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
