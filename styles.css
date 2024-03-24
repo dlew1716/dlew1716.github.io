@@ -139,6 +139,12 @@ ul {
   display : none;
 }
 
+#bike{
+  font-size: 1rem;
+  font-family: "Computer Modern Sans", Helvetica, sans-serif;
+  display : none;
+}
+
 img{
 
   max-width:100%;
